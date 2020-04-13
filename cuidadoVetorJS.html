@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta lang="pt-br">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cuidado com Vetores em Javascript !</title>
+
+</head>
+
+<body>
+
+	<script type="application/javascript">	
+		
+            function retiraElementoVetor(vetorRecebido,posicaoNoVetor){
+                if (  vetorRecebido.length != undefined){
+                    vetorRecebido.splice(posicaoNoVetor,1);
+                }
+                return vetorRecebido;	
+            }		
+
+            function adicionaElementosVetor(vetorRecebido,valorMenor,valorMaior) {
+                if (  vetorRecebido.length != undefined){
+                    vetorRecebido.unshift ( valorMenor ); 
+                    vetorRecebido.push( valorMaior );
+                }
+                return vetorRecebido;	
+            } 
+
+		const vetorInicial = [14,17,45,21,35,11,62];
+        var vetorCopia = vetorInicial;
+        
+//		var vetorCopia = vetorInicial.slice();
+//        adicionaElementosVetor(vetorCopia,1,100)
+//       retiraElementoVetor(vetorCopia,5);
+
+        //Exibe vetores na tela e console
+        document.write('Vetor Inicial: '+vetorInicial+'<br>');
+        console.log('Vetor Inicial: '+vetorInicial);
+        document.write('Vetor Cópia: '+vetorCopia+'<br>');
+		console.log('Vetor Cópia: '+vetorCopia);
+			
+	</script>
+
+</body>
+</html>
